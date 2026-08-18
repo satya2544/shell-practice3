@@ -47,9 +47,9 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +14)
 
 if [ ! -z "${FILES}" ]; then
-    echo "Files found"
+    echo -e "Files found"
 else
-    echo "No files to archeive ...$Y SKIP $N"
+    echo -e "No files to archeive ...$Y SKIP $N"
 fi
 
 
