@@ -53,6 +53,20 @@ if [ ! -z "${FILES}" ]; then
     echo "Zip file name: $ZIP_FILE_NAME"
     find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS
 
+if [ -f $ZIP_FILE_NAME ]
+then
+   echo -e "$G success $N"
+   while IFS= read -r filepath
+do
+
+   echo "Deleting the file: $filepath"
+   rm -rf $filepath
+   echo "Deleted the file: $filepath"
+done <<< $FILES
+else
+    echo "$R fail $N"  
+    exit 1     
+
 
 else
     echo -e "No files to archeive ...$Y SKIP $N"
