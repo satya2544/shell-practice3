@@ -6,7 +6,7 @@ MESSAGE_BODY=$4
 IP_ADDRESS=$5
 TO_TEAM=$6
 
-FINAL_BODY=$(sed -e "s/TO_TEAM/g" -e "s/ALERT_TYPE/g" -e "s/IP_ADDRESS/$ALERT_TYPE/g" -e "s/MESSAGE/$MESSAGE_BODY/g")
+FINAL_BODY=$(sed -e "s/TO_TEAM/g" -e "s/ALERT_TYPE/g" -e "s/IP_ADDRESS/$ALERT_TYPE/g" -e "s/MESSAGE/$MESSAGE_BODY/g" template.html)
 
 
 {
