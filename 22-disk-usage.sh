@@ -15,3 +15,13 @@ do
 done <<< $DISK_USAGE
 
 echo -e "Message Body: $MESSAGE"
+
+sh mail.sh "info@koppolu.satya.com" "High Disk Usage Alert" "High Disk Usage" "$MESSAGE" "$IP_ADDRESS" "devops team👨‍✈️👨‍✈️"
+
+
+
+# TO_ADDRESS=$1
+# SUBJECT=$2
+# ALERT_TYPE=$3
+# MESSAGE_BODY=$4
+# IP_ADDRESS=$5
